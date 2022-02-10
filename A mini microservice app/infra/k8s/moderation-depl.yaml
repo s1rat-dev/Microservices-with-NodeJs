@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: moderations-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moderations
+  template:
+    metadata:
+      labels:
+        app: moderations
+    spec:
+      containers:
+        - name: moderations
+          image: s1ratdev/moderations
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: moderations-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: moderations
+  ports:
+    - name: moderations
+      port: 4003
+      targetPort: 4003
+      protocol: TCP

@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: posts-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: moderations
+  template:
+    metadata:
+      labels:
+        app: moderations
+    spec:
+      containers:
+        - name: posts
+          image: s1ratdev/posts
+        
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: posts-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: moderations
+  ports:
+    - name: posts
+      port: 4000
+      targetPort: 4000
+      protocol: TCP

@@ -14,7 +14,7 @@ const handleComments = async (type,data) =>  {
             'rejected' :
             'approved';
 
-        await axios.post('http://localhost:4005/events', {
+        await axios.post('http://event-bus-srv:4005/events', {
             type: 'CommentModerated',
             data: {
                 id:data.id,
@@ -42,7 +42,7 @@ app.post('/events',  async (
 app.listen(4003, async () => {
     console.log('4003 listening by Moderation.');
 
-    const res = await axios.get('http://localhost:4005/events');
+    const res = await axios.get('http://event-bus-srv:4005/events');
 
     res.data.forEach(event => {
         handleComments(event.type,event.data);

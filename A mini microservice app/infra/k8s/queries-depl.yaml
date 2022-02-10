@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: queries-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: queries
+  template:
+    metadata:
+      labels:
+        app: queries
+    spec:
+      containers:
+        - name: queries
+          image: s1ratdev/queries
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: queries-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: queries
+  ports:
+    - name: queries
+      port: 4002
+      targetPort: 4002
+      protocol: TCP
