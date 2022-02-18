@@ -20,18 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0889374-4c06-4620-9a86-37011a60dc81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/infra/k8s/comments-depl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/k8s/event-bus-depl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/k8s/moderation-depl.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/k8s/posts-depl.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/k8s/posts-serv.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/k8s/queries-depl.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/k8s/client-depl.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/infra/k8s/ingress-serv.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/comments/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/node_modules/body-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/comments/node_modules/body-parser/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comments/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/comments/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CommentCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CommentCreate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/CommentList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CommentList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/PostCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/PostCreate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/PostList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/PostList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event-bus/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/event-bus/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/event-bus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/event-bus/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/moderation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/moderation/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/posts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/posts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/query/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/query/index.js" afterDir="false" />
     </list>
@@ -53,13 +56,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/query" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sirat\Desktop\Algoritmalar\Microservices-with-NodeJs\A mini microservice app\client" />
       <recent name="C:\Users\sirat\Desktop\Algoritmalar\Microservices-with-NodeJs\A mini microservice app\query" />
       <recent name="C:\Users\sirat\Desktop\Algoritmalar\Microservices-with-NodeJs\A mini microservice app\comments" />
       <recent name="C:\Users\sirat\Desktop\Algoritmalar\Microservices-with-NodeJs\A mini microservice app\event-bus" />
@@ -83,7 +87,18 @@
       <workItem from="1644415522872" duration="155000" />
       <workItem from="1644415690709" duration="6054000" />
       <workItem from="1644441463636" duration="6236000" />
-      <workItem from="1644487357194" duration="7730000" />
+      <workItem from="1644487357194" duration="8690000" />
+      <workItem from="1644934362584" duration="635000" />
+      <workItem from="1644935014481" duration="1024000" />
+      <workItem from="1644936140862" duration="1428000" />
+      <workItem from="1644939090573" duration="2391000" />
+      <workItem from="1644943002274" duration="1714000" />
+      <workItem from="1644947216895" duration="1122000" />
+      <workItem from="1644953556904" duration="9907000" />
+      <workItem from="1645006307032" duration="2123000" />
+      <workItem from="1645051726526" duration="3326000" />
+      <workItem from="1645132200598" duration="10448000" />
+      <workItem from="1645145749504" duration="972000" />
     </task>
     <servers />
   </component>
@@ -107,6 +122,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="516" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1644498786836" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1644968689974">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1644968689974" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1644415624812">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -115,9 +134,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="478" y="11" width="579" height="801" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1644497136112" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1644498792447">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1644944047615">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1644498792447" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1644944047615" />
+    <state x="815" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1644940573768">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="815" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1644940573767" />
   </component>
 </project>

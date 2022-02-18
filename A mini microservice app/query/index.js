@@ -67,7 +67,9 @@ app.post('/events', (
 
 app.listen(4002,async () => {
     console.log('4002 listening by Query');
-    const res = await axios.get('http://event-bus-srv:4005/events');
+    const res = await axios.get('http://event-bus-srv:4005/events').catch(r => {
+        console.log(r);
+    });
     res.data.forEach(event => {
         handleEvent(event.type,event.data);
     })

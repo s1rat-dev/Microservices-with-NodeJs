@@ -1,44 +1,25 @@
-import React from 'react';
-
+import React from "react";
 
 const CommentList = ({ comments }) => {
+  const renderedComments = comments.map((comment) => {
+    let content;
 
-    const renderedComments = comments.map(comment => {
+    if (comment.status === "approved") {
+      content = comment.content;
+    }
 
-        if (comment.status === "pending") {
-            return(
-                <li key={comment.id}>
-                    This comment is awaiting moderation.
-                </li>
-            )
-        }
-        if (comment.status === "approved") {
-            return(
-                <li key={comment.id}>
-                    {comment.content}
-                </li>
-            )
-        }
+    if (comment.status === "pending") {
+      content = "This comment is awaiting moderation";
+    }
 
-        if (comment.status === "rejected") {
-            return(
-                <li key={comment.id}>
-                    This comment has been rejected.
-                </li>
-            )
-        }
+    if (comment.status === "rejected") {
+      content = "This comment has been rejected";
+    }
 
+    return <li key={comment.id}>{content}</li>;
+  });
 
-
-
-    })
-
-    return(
-        <ul>
-            {renderedComments}
-        </ul>
-    );
-
-}
+  return <ul>{renderedComments}</ul>;
+};
 
 export default CommentList;
