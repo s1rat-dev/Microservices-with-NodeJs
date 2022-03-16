@@ -20,23 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0889374-4c06-4620-9a86-37011a60dc81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/k8s/client-depl.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/infra/k8s/ingress-serv.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skaffold.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CommentCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CommentCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/CommentList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/CommentList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/PostCreate.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/PostCreate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/PostList.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/PostList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-bus/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/event-bus/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-bus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/event-bus/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/posts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/query/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/query/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +83,7 @@
       <workItem from="1645051726526" duration="3326000" />
       <workItem from="1645132200598" duration="10448000" />
       <workItem from="1645145749504" duration="972000" />
+      <workItem from="1645225329794" duration="1141000" />
     </task>
     <servers />
   </component>
